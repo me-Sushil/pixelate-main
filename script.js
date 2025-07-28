@@ -2,7 +2,7 @@
 //npm start
 
 let table = document.getElementById("table");
-
+let add = document.getElementById("add-row");
 function makeRow() {
   let row = document.createElement("tr");
   for(let i=0; i<20; i++){
@@ -13,10 +13,10 @@ function makeRow() {
 }
 makeRow();
 makeRow();
-makeRow();
-makeRow();
-makeRow();
-makeRow();
-makeRow();
-makeRow();
-makeRow();
+
+add.addEventListener("click", makeRow)
+table.addEventListener("click", clicked)
+
+function clicked(event){
+  console.log("clicked");
+}
