@@ -5,7 +5,7 @@ let table = document.getElementById("table");
 let add = document.getElementById("add-row");
 function makeRow() {
   let row = document.createElement("tr");
-  for(let i=0; i<20; i++){
+  for (let i = 0; i < 20; i++) {
     let td = document.createElement("td");
     row.appendChild(td);
   }
@@ -14,9 +14,14 @@ function makeRow() {
 makeRow();
 makeRow();
 
-add.addEventListener("click", makeRow)
-table.addEventListener("click", clicked)
+add.addEventListener("click", makeRow);
+table.addEventListener("click", colorize);
 
-function clicked(event){
-  console.log("clicked");
+function colorize(event) {
+  let target = event.target;
+  if (target.className.length) {
+    target.className = "";
+  } else {
+    target.className = "blue";
+  }
 }
