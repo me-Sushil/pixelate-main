@@ -29,8 +29,8 @@ border: 5px solid rgb(255, 0, 0); /* or any color and thickness you prefer */
   /* margin: 0; */
 
 td {
-  height: 1px;
-  width: 1px;
+  height: 2px;
+  width: 2px;
   background-color: rgb(255, 255, 255);
   border: none;
   
