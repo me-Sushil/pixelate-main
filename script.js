@@ -13,15 +13,18 @@ function makeRow() {
 }
 makeRow();
 makeRow();
+makeRow();
+makeRow();
 
 add.addEventListener("click", makeRow);
 table.addEventListener("click", colorize);
 
 
-let choseColor;
+let choseColor = "red";
 function colorize(event) {
-  let target = event.target;
-  if (target.className.length) {
+  const target = event.target;
+  if(target.tagName === "TABLE") return; 
+  if (target.className === choseColor) {
     target.className = "";
   } else {
     target.className = choseColor;
@@ -30,5 +33,5 @@ function colorize(event) {
 
 let select = document.getElementById("select");
 select.addEventListener("change", (event)=>{
-    choseColor = event.target.value;    
+    choseColor = event.target.value;   
 })
