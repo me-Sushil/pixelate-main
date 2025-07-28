@@ -4,8 +4,8 @@
 }
 
 html {
-  background-color: #222;
-  color: white;
+  background-color: hsl(0, 0%, 0%);
+  color: rgb(255, 0, 0);
 }
 
 body {
@@ -14,10 +14,26 @@ body {
   align-items: center;
 }
 
+#table{
+border: 5px solid rgb(255, 0, 0); /* or any color and thickness you prefer */
+  border-collapse: collapse;
+}
+ /* .tables{
+  border-width: 10px;
+  border-color: black;
+  border-radius: 10px;
+ } */
+  /* transform: scale(0.5);  */
+  /* transform-origin: center; */
+  /* padding: 0; */
+  /* margin: 0; */
+
 td {
-  height: 50px;
-  width: 50px;
-  background-color: lightgray;
+  height: 1px;
+  width: 1px;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  
 }
 
 .red{
