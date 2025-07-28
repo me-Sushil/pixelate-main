@@ -17,11 +17,18 @@ makeRow();
 add.addEventListener("click", makeRow);
 table.addEventListener("click", colorize);
 
+
+let choseColor;
 function colorize(event) {
   let target = event.target;
   if (target.className.length) {
     target.className = "";
   } else {
-    target.className = "blue";
+    target.className = choseColor;
   }
 }
+
+let select = document.getElementById("select");
+select.addEventListener("change", (event)=>{
+    choseColor = event.target.value;    
+})
